@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="w-full py-8 font-['Helvetica_Now_Display']">
+    <nav class="flex text-lg justify-between px-[10rem] items-center">
+      <h1>Portfolio</h1>
+      <div class="links flex gap-10">
+        <a class="font-medium text-lg" href="#">Home</a>
+        <a class="font-medium text-lg opacity-30" href="#">About</a>
+        <a class="font-medium text-lg opacity-30" href="#">Contact</a>
+        <a class="font-medium text-lg opacity-30" href="#">Work Together</a>
+      </div>
+    </nav>
+    <section class="w-full mt-20 flex justify-between item-end">
+      <div class="leftheading px-[10rem]">
+        <h6 class="text-2xl -mb-3 tracking-tighter font-bold">Hello I am,</h6>
+        <h1 class="text-[9rem] leading-none -ml-3 tracking-tighter font-bold">
+          Sazzz.
+        </h1>
+      </div>
+      <div class="right-headings flex gap-3 px-40 items-center">
+        <h4 id="time" class="tracking-tighter font-medium text-xl">[--:-- --]</h4>
+        <div class="w-32 h-[1px] bg-black"></div>
+        <h3 class="tracking-tighter font-medium">Creative Front End Developer</h3>
+    </div>
+    
+    <script>
+        function updateTime() {
+            const now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes().toString().padStart(2, '0');
+            let ampm = hours >= 12 ? 'PM' : 'AM';
+    
+            // Convert 24-hour format to 12-hour format
+            hours = hours % 12 || 12; 
+    
+            document.getElementById("time").textContent = `[${hours}:${minutes} ${ampm}]`;
+        }
+    
+        setInterval(updateTime, 1000); // Update every second
+        updateTime(); // Set time immediately on load
+    </script>
+    </section>
+    <section class="picture w-full h-[50rem] px-[10rem] mt-10">
+      <img class="w-full h-full object-cover object-[0%_20%] rounded-[90px]"
+        src="https://images.unsplash.com/photo-1734784548166-a1ffe07dd7cd?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8"
+        alt="" />
+    </section>
+    <section class="about w-full px-10 flex items-center justify-center py-20 mt-40">
+      <div class="relative text text-center w-2/3">
+        <img class="absolute height-[60px] -rotate-25 w-[60px] -left-30 -top-10" src="vscode.png" alt="" />
+        <img class="absolute height-[60px] rotate-25 w-[60px] right-0 -top-30" src="html.png" alt="" />
+        <img src="javascript.png" class="absolute rotate-30 height-[60px] w-[60px] left-10 -bottom-50" alt="" />
+        <img class="absolute height-[60px] w-[60px] rotate-30 right-10 -bottom-40" src="css.png" alt="" />
+        <h1 class="text-6xl font-bold tracking-tight mb-10">
+          [I design & bluid Experince]
+        </h1>
+        <p class="text-2xl font-medium tracking-tighter">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
+          itaque non molestiae dolorem, quaerat saepe harum in maxime iure
+          labore!
+        </p>
+      </div>
+    </section>
+    <section class="w-full relative h-500 py-20 mt-50">
+      <div class="w-full sticky px-[5rem] top-0 bg-white z-10 flex items-center gap-10 py-20">
+        <p class="text-6xl">2017.</p>
+        <p class="w-32 h-[1px] bg-black"></p>
+        <p class="text-6xl opacity-40">The Beginning</p>
+      </div>
+      <div class="imagecontent flex justify-center gap-10">
+        <div class="col flex flex-col gap-20 py-3">
+          <div class="w-120 h-120 bg-black opacity-10"></div>
+          <div class="w-120 h-200 bg-black opacity-10"></div>
+        </div>
+        <div class="col flex flex-col gap-20 py-3">
+          <div class="w-120 h-160 mt-30 bg-black opacity-10"></div>
+          <div class="w-120 h-160 bg-black opacity-10"></div>
+        </div>
+        <div class="col flex flex-col gap-20 py-3">
+          <div class="w-120 h-200 bg-black opacity-10"></div>
+          <div class="w-120 h-120 bg-black opacity-10"></div>
+        </div>
+      </div>
+    </section>
+    <section class="w-full relative h-480 py-20">
+      <div class="w-full sticky px-[5rem] top-0 bg-white flex z-10 items-center gap-10 px-10 py-20">
+        <p class="text-6xl">2018.</p>
+        <p class="w-32 h-[1px] bg-black"></p>
+        <p class="text-6xl text-zinc-400">The Escalation</p>
+      </div>
+      <div class="imagecontent flex justify-center gap-10">
+        <div class="col flex flex-col gap-20 py-3">
+          <div class="w-120 h-120 bg-black opacity-10"></div>
+          <div class="w-120 h-160 bg-black opacity-10"></div>
+        </div>
+        <div class="col flex flex-col gap-20 py-3">
+          <div class="w-120 h-160 bg-black opacity-10"></div>
+          <div class="w-120 h-200 bg-black opacity-10"></div>
+        </div>
+        <div class="col flex flex-col gap-20 py-3">
+          <div class="w-120 h-200 bg-black opacity-10"></div>
+          <div class="w-120 h-120 bg-black opacity-10"></div>
+        </div>
+      </div>
+    </section>
+    <section class="icon">
+      <img src="Screenshot 2025-02-12 144620.png" alt="" />
+    </section>
+    <section class="pj">
+      <section class="px-[5rem] bg-white sticky top-0">
+        <div>
+          <p class="text-4xl font-bold">Clients</p>
+        </div>
+        <div class="flex items-center font-bold gap-10">
+          <p class="text-9xl tracking-tight">Testimonials</p>
+          <img class="w-[20rem] h-40" src="https://img.icons8.com/ios/100/long-arrow-right--v1.png"
+            alt="long-arrow-right--v1" />
+          <p class="text-9xl tracking-tight">Works</p>
+        </div>
+      </section>
+      <section class="w-full px-[5rem]">
+        <p class="text-6xl mt-40 font-bold">Britannia</p>
+        <div class="flex items-center gap-3">
+          <p class="font-['Impact_Label_Reversed'] text-3xl">2017</p>
+          <img class="w-[2rem]" src="https://img.icons8.com/ios/100/long-arrow-right--v1.png"
+            alt="long-arrow-right--v1" />
+          <p class="text-3xl">Mumbai</p>
+        </div>
+        <img class="rounded-lg mt-10" src="Screenshot 2025-02-12 153829.png" alt="" />
+      </section>
+      <div class="flex px-[5rem]">
+        <section class="w-[40%] ">
+          <p class="text-6xl mt-40 font-bold">Orange Splash</p>
+          <div class="flex items-center mt-5 gap-3">
+            <p class="font-['Impact_Label_Reversed'] text-4xl">2022</p>
+            <img class="w-[2rem]" src="https://img.icons8.com/ios/100/long-arrow-right--v1.png"
+              alt="long-arrow-right--v1" />
+            <p class="text-4xl">Mumbai</p>
+          </div>
+          <img class="rounded-lg mt-5 h-150" src="Screenshot 2025-02-12 160410.png" alt="" />
+        </section>
+        <section class="w-[55%] mt-100">
+          <p class="text-6xl mt-40 font-bold">Palm Jumerah</p>
+          <div class="flex items-center gap-3 mt-5">
+            <p class="font-['Impact_Label_Reversed'] text-4xl">2025</p>
+            <img class="w-[2rem]" src="https://img.icons8.com/ios/100/long-arrow-right--v1.png"
+              alt="long-arrow-right--v1" />
+            <p class="text-4xl">Dubai</p>
+          </div>
+          <img class="rounded-lg w-400 mt-5 " src="Screenshot 2025-02-12 160441.png" alt="" />
+        </section>
+      </div>
+    </section>
+  </main>
+  <footer class="w-full px-[5rem] flex justify-between ">
+    <div class="text flex text-2xl">
+      <img class="w-[50px]" src="OIP.jpg" alt="">
+      <a class="font-['Good_Pawoo_Display'] font-light text-5xl"
+        href="https://www.instagram.com/sazzz_niziyan/">sazzz_niziyan</a>
+    </div>
+    <div class="time font-bold text-xl" id="liveTime"></div>
+
+    <script>
+        function updateLiveTime() {
+            const now = new Date();
+            const options = { day: '2-digit', month: 'short', year: 'numeric' }; // Format: 12 Feb 2025
+            const date = now.toLocaleDateString('en-GB', options);
+            const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); // Format: 12:00
+            document.getElementById("liveTime").textContent = `${date} [${time}]`;
+        }
+    
+        setInterval(updateLiveTime, 1000); // Update every second
+        updateLiveTime(); // Initial call
+    </script>
+  </footer>
+
+</body>
+
+</html>
